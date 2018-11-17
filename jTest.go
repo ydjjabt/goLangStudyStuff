@@ -7,9 +7,14 @@ import(
 func main(){
 
 
-var john organism = child{name:"child name", parent: parent{name:"cool aid", walk:"cat walk"} }
+var john organism = child{name:"Child name", parent: parent{name:"cool aid", walk:"cat walk"} }
 
-var tom organism = child{name:"tom name", parent: parent{name:"parent", walk:" the run"} }
+var tom organism = parent{name:"PParent", walk:" The Run"} 
+fmt.Println( john.getName() )
+
+fmt.Println( john.getWalk() )
+
+
 
 john = tom
 fmt.Println( john.getName() )
@@ -63,6 +68,7 @@ func(c child) getWalk()string{
 
 /*
 inherited class should always override parent function. polymorphism or not
+if type is interface, u cannot change property. can change when it not interface using dot operator
 
 */
 
